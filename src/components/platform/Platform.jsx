@@ -1,16 +1,19 @@
 import React from 'react';
 
 const Platform = ({ position, width, height }) => {
+  const { x, y } = position;
+
   return (
     <div
-      className="bg-green-500 absolute border-2 border-white"
       style={{
-        left: position.x,
-        top: position.y,
-        width: `${width}px`,
-        height: `${height}px`
+        position: 'absolute',
+        left: x,
+        top: y,
+        width: width,
+        height: height,
+        backgroundColor: 'green', // Cambiado a verde
       }}
-    ></div>
+    />
   );
 };
 
